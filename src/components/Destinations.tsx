@@ -58,7 +58,7 @@ const Destinations = () => {
           {destinations.map((destination, index) => (
             <Card 
               key={index}
-              className="group hover-lift interactive-card border-2 stagger-child overflow-hidden"
+              className="group transition-all duration-300 hover:scale-[1.02] hover:shadow-md border border-border/50 stagger-child overflow-hidden bg-card/90 backdrop-blur-sm"
             >
               <div className="relative">
                 <img 

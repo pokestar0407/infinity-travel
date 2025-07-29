@@ -66,7 +66,7 @@ const Clients = () => {
             return (
               <Card 
                 key={index}
-                className="group transition-all duration-300 hover:scale-105 hover:shadow-lg border-2 stagger-child overflow-hidden"
+                className="group transition-all duration-300 hover:scale-[1.02] hover:shadow-md border border-border/50 stagger-child overflow-hidden bg-card/50 backdrop-blur-sm"
               >
                 {/* Background avec image placeholder */}
                 <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden">

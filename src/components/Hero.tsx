@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -41,21 +40,15 @@ const Hero = () => {
 
           {/* Boutons d'action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-            <div className="relative">
-              <Button variant="gradient" size="xl" className="group">
-                VOIR NOS ÉVÉNEMENTS
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <BorderBeam size={50} duration={8} delay={0} borderWidth={1.5} colorFrom="#D8AA55" colorTo="#F5629F" />
-            </div>
+            <Button variant="gradient" size="xl" className="group">
+              VOIR NOS ÉVÉNEMENTS
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
             
-            <div className="relative">
-              <Button variant="outline" size="xl" className="group">
-                <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                DÉCOUVRIR NOTRE UNIVERS
-              </Button>
-              <BorderBeam size={60} duration={10} delay={3} borderWidth={1.2} colorFrom="#00B1E2" colorTo="#D8AA55" />
-            </div>
+            <Button variant="outline" size="xl" className="group">
+              <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              DÉCOUVRIR NOTRE UNIVERS
+            </Button>
           </div>
 
           {/* Stats */}
