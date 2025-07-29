@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin, Star, Users, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Import des images de destinations
@@ -190,6 +191,7 @@ const DestinationsPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

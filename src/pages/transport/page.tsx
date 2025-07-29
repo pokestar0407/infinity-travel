@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Plane, Car, Bus, Truck, Users, Clock, MapPin, ArrowLeft, CheckCircle, Star, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
 
@@ -353,6 +354,7 @@ const TransportPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

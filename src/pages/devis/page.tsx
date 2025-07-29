@@ -1,5 +1,6 @@
 import Devis from "@/components/Devis";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function DevisPage() {
   return (
@@ -8,6 +9,7 @@ export default function DevisPage() {
       <div className="pt-32">
         <Devis />
       </div>
+      <Footer />
     </div>
   );
 }

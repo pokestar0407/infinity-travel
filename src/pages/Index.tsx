@@ -5,6 +5,7 @@ import Clients from "@/components/Clients";
 import Services from "@/components/Services";
 import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
         <Partners />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Gift, Star, Phone, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const GroupesPage = () => {
@@ -217,6 +218,7 @@ const GroupesPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
