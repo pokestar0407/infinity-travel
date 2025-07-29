@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo-white.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,12 +21,13 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center animate-pulse-glow">
-              <Zap className="w-6 h-6 text-white" />
+              <img src={logo} alt="Infinity Travel logo" className="object-contain w-full h-full" />
             </div>
             <span className="text-2xl font-black text-gradient">INFINITY TRAVEL</span>
-          </div>
+          </Link>
+
 
           {/* Menu desktop */}
           <div className="hidden lg:flex items-center gap-8">
