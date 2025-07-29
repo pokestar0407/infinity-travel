@@ -84,7 +84,7 @@ const Destinations = () => {
                   </Button>
                 </CardContent>
               </Card>
-              {index % 2 === 0 && <BorderBeam size={100} duration={20} delay={index * 2} />}
+              {index === 0 && <BorderBeam size={40} duration={15} delay={0} borderWidth={0.8} colorFrom="#D8AA55" colorTo="#00B1E2" />}
             </div>
           ))}
         </div>

@@ -46,7 +46,7 @@ const Hero = () => {
                 VOIR NOS ÉVÉNEMENTS
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <BorderBeam size={120} duration={12} delay={0} />
+              <BorderBeam size={50} duration={8} delay={0} borderWidth={1} colorFrom="#D8AA55" colorTo="#F5629F" />
             </div>
             
             <div className="relative">
@@ -54,7 +54,7 @@ const Hero = () => {
                 <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 DÉCOUVRIR NOTRE UNIVERS
               </Button>
-              <BorderBeam size={120} duration={15} delay={2} colorFrom="#60a5fa" colorTo="#8b5cf6" />
+              <BorderBeam size={60} duration={10} delay={3} borderWidth={0.8} colorFrom="#00B1E2" colorTo="#D8AA55" />
             </div>
           </div>
 

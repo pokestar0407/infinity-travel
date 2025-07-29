@@ -82,7 +82,7 @@ const Services = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-                {index < 3 && <BorderBeam size={120} duration={18} delay={index * 3} />}
+                {index === 1 && <BorderBeam size={45} duration={12} delay={2} borderWidth={0.7} colorFrom="#F5629F" colorTo="#D8AA55" />}
               </div>
             );
           })}
