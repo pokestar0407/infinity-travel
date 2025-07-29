@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
 
           {/* Titre principal avec effet outline */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6 animate-fadeInUp">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 animate-fadeInUp">
             <span className="block text-outline">LE VOYAGE</span>
             <span className="block text-gradient">A VOTRE</span>
             <span className="block text-outline">PORTEÉ AVEC NOUS</span>
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient mb-2">500+</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Événements créés</div>

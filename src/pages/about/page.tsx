@@ -44,7 +44,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 scroll-fade-in">
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
               <span className="text-gradient-accent">UNE ÉQUIPE</span>{" "}
               <span className="text-outline">À VOTRE</span>{" "}
               <span className="text-gradient">ÉCOUTE</span>
@@ -114,7 +114,7 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {teamValues.map((value, index) => {
               const IconComponent = value.icon;
               return (
@@ -142,7 +142,7 @@ const AboutPage = () => {
       {/* Stats */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={stat.label} className="text-center stagger-child">
                 <div className={`text-4xl md:text-5xl font-black mb-2 text-gradient${stat.color === 'secondary' ? '-secondary' : stat.color === 'accent' ? '-accent' : ''}`}>

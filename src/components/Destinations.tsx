@@ -40,7 +40,7 @@ const Destinations = () => {
             <div className="h-px bg-gradient-hero w-20"></div>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
             <span className="text-gradient">NOS</span>{" "}
             <span className="text-outline">DESTINATIONS</span>
           </h2>
@@ -53,7 +53,7 @@ const Destinations = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {destinations.map((destination, index) => (
             <Card 
               key={index}

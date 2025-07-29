@@ -16,11 +16,11 @@ const GroupesPage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 scroll-fade-in">
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
               <span className="text-gradient-secondary">PROFITEZ</span>{" "}
               <span className="text-outline">DE NOS SUPERBES</span>
             </h1>
-            <h2 className="text-4xl md:text-6xl font-black mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black mb-8">
               <span className="text-gradient-accent">OFFRES DE GROUPES</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ const GroupesPage = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             <Card className="border-2 bg-card/80 backdrop-blur-sm text-center stagger-child">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl mx-auto flex items-center justify-center mb-4">

@@ -61,7 +61,7 @@ const DestinationsPage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 scroll-fade-in">"
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
               <span className="text-gradient">DÉCOUVREZ</span>{" "}
               <span className="text-outline">NOS MAGNIFIQUES</span>{" "}
               <span className="text-gradient-secondary">DESTINATIONS</span>
@@ -77,7 +77,7 @@ const DestinationsPage = () => {
       {/* Destinations Grid */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {destinations.map((destination, index) => (
               <Card key={destination.name} className="group hover-lift interactive-card border-2 stagger-child">
                 <div className="relative h-64 overflow-hidden">
