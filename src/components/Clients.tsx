@@ -9,7 +9,7 @@ const clientTypes = [
     title: "Association",
     description: "Voyages de groupe personnalisés pour associations et clubs",
     image: "photo-1519389950473-47ba0277781c",
-    color: "primary"
+    color: "secondary"
   },
   {
     icon: Briefcase,
@@ -23,14 +23,14 @@ const clientTypes = [
     title: "BDE",
     description: "Événements et voyages étudiants inoubliables",
     image: "photo-1605810230434-7631ac76ec81",
-    color: "accent"
+    color: "secondary"
   },
   {
     icon: Building,
     title: "Entreprises",
     description: "Solutions voyage sur-mesure pour entreprises",
     image: "photo-1487058792275-0ad4aaf24ca7",
-    color: "primary"
+    color: "secondary"
   }
 ];
 
@@ -75,7 +75,7 @@ const Clients = () => {
                     alt={client.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                   
                   {/* Badge avec titre */}
                   <div className="absolute bottom-4 left-4 right-4">
