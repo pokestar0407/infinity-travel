@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Plane, Car, Bus, Truck, Users, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Plane, Car, Bus, Truck, Users, Clock, MapPin, ArrowLeft, CheckCircle, Star, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useState } from "react";
 
 const transportServices = [
   {
@@ -13,7 +14,19 @@ const transportServices = [
     details: "Vol privé, première classe ou économique selon vos besoins",
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
     color: "primary",
-    features: ["Vol privé disponible", "Réservation flexible", "Service VIP"]
+    features: ["Vol privé disponible", "Réservation flexible", "Service VIP"],
+    backContent: {
+      title: "Services Aériens Premium",
+      description: "Voyagez avec style et confort dans nos jets privés ou en première classe.",
+      detailedFeatures: [
+        { icon: CheckCircle, text: "Jets privés de luxe avec équipage professionnel" },
+        { icon: CheckCircle, text: "Réservation last-minute disponible 24h/24" },
+        { icon: CheckCircle, text: "Service de conciergerie personnalisé" },
+        { icon: CheckCircle, text: "Accès aux lounges VIP dans le monde entier" }
+      ],
+      pricing: "À partir de 2500€ par vol",
+      contact: "Appelez-nous pour un devis personnalisé"
+    }
   },
   {
     title: "LOCATION DE VOITURE", 
@@ -22,7 +35,19 @@ const transportServices = [
     details: "Large gamme de véhicules pour tous vos déplacements",
     image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
     color: "secondary",
-    features: ["Assurance incluse", "Véhicules récents", "Livraison possible"]
+    features: ["Assurance incluse", "Véhicules récents", "Livraison possible"],
+    backContent: {
+      title: "Location de Véhicules",
+      description: "Des citadines aux SUV de luxe, trouvez le véhicule parfait pour votre voyage.",
+      detailedFeatures: [
+        { icon: CheckCircle, text: "Flotte moderne et entretenue régulièrement" },
+        { icon: CheckCircle, text: "Assurance tous risques incluse" },
+        { icon: CheckCircle, text: "Livraison et récupération à domicile" },
+        { icon: CheckCircle, text: "GPS et équipements de sécurité fournis" }
+      ],
+      pricing: "À partir de 35€ par jour",
+      contact: "Réservation en ligne ou par téléphone"
+    }
   },
   {
     title: "BUS & TRAIN",
@@ -31,7 +56,19 @@ const transportServices = [
     details: "Transport confortable pour vos groupes",
     image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
     color: "accent",
-    features: ["Transport de groupe", "Itinéraires personnalisés", "Confort optimal"]
+    features: ["Transport de groupe", "Itinéraires personnalisés", "Confort optimal"],
+    backContent: {
+      title: "Transport Collectif",
+      description: "Solutions de transport économiques et écologiques pour tous vos déplacements.",
+      detailedFeatures: [
+        { icon: CheckCircle, text: "Bus grand confort avec wifi et climatisation" },
+        { icon: CheckCircle, text: "Itinéraires sur mesure pour votre groupe" },
+        { icon: CheckCircle, text: "Conducteurs expérimentés et multilingues" },
+        { icon: CheckCircle, text: "Tarifs dégressifs selon la taille du groupe" }
+      ],
+      pricing: "À partir de 15€ par personne",
+      contact: "Devis gratuit sous 24h"
+    }
   },
   {
     title: "VAN",
@@ -40,12 +77,32 @@ const transportServices = [
     details: "Solution idéale pour les petits groupes",
     image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3",
     color: "primary",
-    features: ["8-15 places", "Équipé et moderne", "Conducteur professionnel"]
+    features: ["8-15 places", "Équipé et moderne", "Conducteur professionnel"],
+    backContent: {
+      title: "Transport en Van",
+      description: "L'intimité d'un véhicule privé avec la convivialité du voyage en groupe.",
+      detailedFeatures: [
+        { icon: CheckCircle, text: "Vans 8 à 15 places ultra-confortables" },
+        { icon: CheckCircle, text: "Équipés de prises USB et wifi" },
+        { icon: CheckCircle, text: "Conducteur guide parlant plusieurs langues" },
+        { icon: CheckCircle, text: "Arrêts personnalisés selon vos envies" }
+      ],
+      pricing: "À partir de 120€ par jour",
+      contact: "Réservation avec chauffeur inclus"
+    }
   }
 ];
 
 const TransportPage = () => {
   useScrollAnimation();
+  const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>({});
+
+  const toggleCard = (index: number) => {
+    setFlippedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
   
   return (
     <div className="min-h-screen bg-background">
@@ -75,55 +132,126 @@ const TransportPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {transportServices.map((service, index) => {
               const IconComponent = service.icon;
+              const isFlipped = flippedCards[index];
+              
               return (
-                <Card key={service.title} className="group hover-lift interactive-card border-2 stagger-child">
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={`${service.image}?w=400&h=300&fit=crop&auto=format,compress&q=75`}
-                      alt={service.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      style={{
-                        background: 'linear-gradient(45deg, hsl(var(--primary)/0.1), hsl(var(--secondary)/0.1))',
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute top-4 right-4">
-                      <div className={`bg-${service.color}/20 backdrop-blur-sm rounded-full p-3`}>
-                        <IconComponent className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <CardHeader>
-                    <CardTitle className={`text-lg font-black text-gradient${service.color === 'secondary' ? '-secondary' : service.color === 'accent' ? '-accent' : ''}`}>
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground text-sm">
-                      {service.description}
-                    </p>
-                    <p className="text-sm font-medium">
-                      {service.details}
-                    </p>
-                    
-                    <div className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-xs">
-                          <div className={`w-2 h-2 rounded-full bg-${service.color}`} />
-                          <span className="text-muted-foreground">{feature}</span>
+                <div key={service.title} className="group perspective-1000 stagger-child">
+                  <div className={`relative w-full h-[600px] transform-style-preserve-3d transition-transform duration-700 ${isFlipped ? 'rotate-y-180' : ''}`}>
+                    {/* Face avant */}
+                    <Card className="absolute inset-0 backface-hidden hover-lift interactive-card border-2">
+                      <div className="relative h-48 overflow-hidden">
+                        <img 
+                          src={`${service.image}?w=400&h=300&fit=crop&auto=format,compress&q=75`}
+                          alt={service.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          style={{
+                            background: 'linear-gradient(45deg, hsl(var(--primary)/0.1), hsl(var(--secondary)/0.1))',
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="absolute top-4 right-4">
+                          <div className={`bg-${service.color}/20 backdrop-blur-sm rounded-full p-3`}>
+                            <IconComponent className="w-6 h-6 text-white" />
+                          </div>
                         </div>
-                      ))}
-                    </div>
-                    
-                    <Button variant="outline" size="sm" className="w-full group">
-                      En savoir plus
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                      </div>
+                      
+                      <CardHeader>
+                        <CardTitle className={`text-lg font-black text-gradient${service.color === 'secondary' ? '-secondary' : service.color === 'accent' ? '-accent' : ''}`}>
+                          {service.title}
+                        </CardTitle>
+                      </CardHeader>
+                      
+                      <CardContent className="space-y-4">
+                        <p className="text-muted-foreground text-sm">
+                          {service.description}
+                        </p>
+                        <p className="text-sm font-medium">
+                          {service.details}
+                        </p>
+                        
+                        <div className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs">
+                              <div className={`w-2 h-2 rounded-full bg-${service.color}`} />
+                              <span className="text-muted-foreground">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full group"
+                          onClick={() => toggleCard(index)}
+                        >
+                          En savoir plus
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+
+                    {/* Face arrière */}
+                    <Card className="absolute inset-0 backface-hidden rotate-y-180 border-2 bg-gradient-to-br from-background to-muted/20">
+                      <CardHeader className="pb-4">
+                        <div className="flex items-center justify-between">
+                          <div className={`w-12 h-12 bg-${service.color}/10 rounded-xl flex items-center justify-center`}>
+                            <IconComponent className={`w-6 h-6 text-${service.color}`} />
+                          </div>
+                          <Button 
+                            variant="ghost" 
+                            size="sm"
+                            onClick={() => toggleCard(index)}
+                            className="h-8 w-8 p-0"
+                          >
+                            <ArrowLeft className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <CardTitle className={`text-lg font-black text-gradient${service.color === 'secondary' ? '-secondary' : service.color === 'accent' ? '-accent' : ''}`}>
+                          {service.backContent.title}
+                        </CardTitle>
+                      </CardHeader>
+                      
+                      <CardContent className="space-y-4 overflow-y-auto">
+                        <p className="text-sm text-muted-foreground">
+                          {service.backContent.description}
+                        </p>
+                        
+                        <div className="space-y-3">
+                          {service.backContent.detailedFeatures.map((feature, idx) => {
+                            const FeatureIcon = feature.icon;
+                            return (
+                              <div key={idx} className="flex items-start gap-2 text-xs">
+                                <FeatureIcon className={`w-4 h-4 text-${service.color} flex-shrink-0 mt-0.5`} />
+                                <span className="text-muted-foreground">{feature.text}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        
+                        <div className="border-t pt-4 space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Star className={`w-4 h-4 text-${service.color}`} />
+                            <span className="text-sm font-semibold">{service.backContent.pricing}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Phone className={`w-4 h-4 text-${service.color}`} />
+                            <span className="text-xs text-muted-foreground">{service.backContent.contact}</span>
+                          </div>
+                        </div>
+                        
+                        <Button 
+                          variant="gradient" 
+                          size="sm" 
+                          className="w-full mt-4"
+                        >
+                          Réserver maintenant
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
