@@ -7,9 +7,10 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "ACCUEIL", href: "#home" },
+    { label: "DESTINATIONS", href: "#destinations" },
+    { label: "CLIENTS", href: "#clients" },
     { label: "SERVICES", href: "#services" },
-    { label: "ÉVÉNEMENTS", href: "#events" },
-    { label: "COMMUNAUTÉ", href: "#community" },
+    { label: "PARTENAIRES", href: "#partners" },
     { label: "CONTACT", href: "#contact" }
   ];
 
