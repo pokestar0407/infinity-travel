@@ -24,7 +24,7 @@ const Partners = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-fade-in">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px bg-gradient-accent w-20"></div>
             <Handshake className="w-8 h-8 text-accent" />
@@ -46,7 +46,7 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <Card 
               key={index}
-              className="group hover:scale-105 transition-smooth border-2 hover:border-accent/30 bg-card/50 backdrop-blur-sm"
+              className="group hover-lift interactive-card border-2 stagger-child"
             >
               <CardContent className="p-8 flex items-center justify-center h-24">
                 <img 

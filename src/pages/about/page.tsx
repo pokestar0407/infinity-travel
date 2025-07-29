@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Heart, Users, Award, Phone, Mail, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const teamValues = [
   {
@@ -33,6 +34,8 @@ const stats = [
 ];
 
 const AboutPage = () => {
+  useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -40,7 +43,7 @@ const AboutPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h1 className="text-5xl md:text-7xl font-black mb-6">
               <span className="text-gradient-accent">UNE ÉQUIPE</span>{" "}
               <span className="text-outline">À VOTRE</span>{" "}
@@ -57,7 +60,7 @@ const AboutPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-            <div className="relative">
+            <div className="relative scroll-slide-left">
               <img 
                 src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" 
                 alt="Équipe Infinity Travel en réunion"
@@ -70,7 +73,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 scroll-slide-right">
               <h2 className="text-4xl md:text-5xl font-black">
                 <span className="text-gradient">NOTRE</span>{" "}
                 <span className="text-outline">HISTOIRE</span>
@@ -101,7 +104,7 @@ const AboutPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-secondary opacity-10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
               <span className="text-gradient-secondary">NOS</span>{" "}
               <span className="text-outline">VALEURS</span>
@@ -115,7 +118,7 @@ const AboutPage = () => {
             {teamValues.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <Card key={value.title} className="border-2 bg-card/80 backdrop-blur-sm text-center group hover:shadow-lg transition-all duration-300">
+                <Card key={value.title} className="border-2 bg-card/80 backdrop-blur-sm text-center group hover:shadow-lg transition-all duration-300 stagger-child">
                   <CardHeader>
                     <div className={`w-16 h-16 bg-${value.color}/10 rounded-2xl mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                       <IconComponent className={`w-8 h-8 text-${value.color}`} />
@@ -141,7 +144,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center">
+              <div key={stat.label} className="text-center stagger-child">
                 <div className={`text-4xl md:text-5xl font-black mb-2 text-gradient${stat.color === 'secondary' ? '-secondary' : stat.color === 'accent' ? '-accent' : ''}`}>
                   {stat.number}
                 </div>
@@ -159,7 +162,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-gradient-accent opacity-10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <Card className="border-2 bg-card/90 backdrop-blur-sm">
+            <Card className="border-2 bg-card/90 backdrop-blur-sm scroll-slide-left">
               <CardHeader>
                 <CardTitle className="text-3xl font-black text-gradient">
                   NOTRE MISSION
@@ -175,7 +178,7 @@ const AboutPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 bg-card/90 backdrop-blur-sm">
+            <Card className="border-2 bg-card/90 backdrop-blur-sm scroll-slide-right">
               <CardHeader>
                 <CardTitle className="text-3xl font-black text-gradient-secondary">
                   NOTRE VISION

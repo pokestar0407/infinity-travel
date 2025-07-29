@@ -5,8 +5,11 @@ import Clients from "@/components/Clients";
 import Services from "@/components/Services";
 import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

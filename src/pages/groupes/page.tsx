@@ -3,8 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Gift, Star, Phone, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const GroupesPage = () => {
+  useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -12,7 +15,7 @@ const GroupesPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h1 className="text-5xl md:text-7xl font-black mb-6">
               <span className="text-gradient-secondary">PROFITEZ</span>{" "}
               <span className="text-outline">DE NOS SUPERBES</span>
@@ -31,7 +34,7 @@ const GroupesPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-            <div>
+            <div className="scroll-slide-left">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
                 <span className="text-gradient">QU'EST CE QUE LE</span>{" "}
                 <span className="text-outline">SERVICE GROUPE ?</span>
@@ -72,7 +75,7 @@ const GroupesPage = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 scroll-slide-right">
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
@@ -96,7 +99,7 @@ const GroupesPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-accent opacity-10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-muted-foreground mb-4">
               Des offres exceptionnelles
             </h2>
@@ -111,7 +114,7 @@ const GroupesPage = () => {
             </h5>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto scroll-scale-up">
             <Card className="border-2 bg-card/90 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
                 <p className="text-lg text-muted-foreground mb-8">
@@ -135,7 +138,7 @@ const GroupesPage = () => {
       {/* Avantages Groupes */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
               <span className="text-gradient">POURQUOI CHOISIR</span>{" "}
               <span className="text-outline">NOS GROUPES ?</span>
@@ -143,7 +146,7 @@ const GroupesPage = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center">
+            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center stagger-child">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl mx-auto flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-primary" />
@@ -157,7 +160,7 @@ const GroupesPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center">
+            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center stagger-child">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-2xl mx-auto flex items-center justify-center mb-4">
                   <Star className="w-8 h-8 text-secondary" />
@@ -171,7 +174,7 @@ const GroupesPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center">
+            <Card className="border-2 bg-card/80 backdrop-blur-sm text-center stagger-child">
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl mx-auto flex items-center justify-center mb-4">
                   <Phone className="w-8 h-8 text-accent" />

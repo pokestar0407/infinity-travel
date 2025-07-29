@@ -37,7 +37,7 @@ const Clients = () => {
   return (
     <section className="py-24 bg-muted/10">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-fade-in">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px bg-gradient-secondary w-20"></div>
             <Users className="w-8 h-8 text-secondary" />
@@ -65,7 +65,7 @@ const Clients = () => {
             return (
               <Card 
                 key={index}
-                className="group relative overflow-hidden border-2 hover:border-secondary/50 transition-smooth hover:scale-105 bg-card/80 backdrop-blur-sm"
+                className="group hover-lift interactive-card border-2 stagger-child"
               >
                 {/* Background avec image placeholder */}
                 <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">

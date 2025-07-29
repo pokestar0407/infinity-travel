@@ -16,30 +16,30 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center pt-8">
         <div className="max-w-6xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8 ">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8 animate-slideInDown">
             <Star className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Infinity Travel - L'agence événementielle #1 des jeunes</span>
           </div>
 
           {/* Titre principal avec effet outline */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6 animate-fadeInUp">
             <span className="block text-outline">LE VOYAGE</span>
             <span className="block text-gradient">A VOTRE</span>
             <span className="block text-outline">PORTEÉ AVEC NOUS</span>
           </h1>
 
           {/* Sous-titre */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             Une communauté créée par <span className="text-gradient-secondary font-bold">VOUS</span> pour <span className="text-gradient-accent font-bold">VOUS</span> et avec <span className="text-gradient font-bold">NOUS</span>
           </p>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             Embarquez pour un voyage infini d'événements extraordinaires. 
             Infinity Travel transforme vos rêves en réalité et crée des expériences qui marquent à vie !
           </p>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <Button variant="gradient" size="xl" className="group">
               VOIR NOS ÉVÉNEMENTS
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -53,19 +53,19 @@ const Hero = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
+            <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient mb-2">500+</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Événements créés</div>
             </div>
-            <div className="text-center">
+            <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient-secondary mb-2">50K+</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Participants</div>
             </div>
-            <div className="text-center">
+            <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient-accent mb-2">95%</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Satisfaction</div>
             </div>
-            <div className="text-center">
+            <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient mb-2">24/7</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Support</div>
             </div>

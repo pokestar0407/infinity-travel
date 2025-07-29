@@ -45,7 +45,7 @@ const Services = () => {
   return (
     <section className="py-24 bg-muted/20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-5xl md:text-7xl font-black mb-6">
             <span className="text-outline">NOS</span>{" "}
             <span className="text-gradient">SERVICES</span>
@@ -62,7 +62,7 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="relative group hover:scale-105 transition-smooth border-2 hover:border-primary/50 bg-card/80 backdrop-blur-sm overflow-hidden"
+                className="hover-lift interactive-card border-2 stagger-child"
               >
                 {/* Gradient background effect */}
                 <div className={`absolute inset-0 bg-gradient-${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
