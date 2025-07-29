@@ -11,6 +11,9 @@ import DestinationsPage from "./pages/destinations/page";
 import GroupesPage from "./pages/groupes/page";
 import TransportPage from "./pages/transport/page";
 import AboutPage from "./pages/about/page";
+import MentionsLegalesPage from "./pages/mentions-legales/page";
+import CGVPage from "./pages/cgv/page";
+import ConfidentialitePage from "./pages/confidentialite/page";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Index />} />
           <Route path="/devis" element={<DevisPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="/cgv" element={<CGVPage />} />
+          <Route path="/confidentialite" element={<ConfidentialitePage />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

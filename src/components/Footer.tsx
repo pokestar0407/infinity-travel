@@ -123,15 +123,15 @@ const Footer = () => {
               © 2024 Infinity Travel. Tous droits réservés.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
+              <Link to="/mentions-legales" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
                 Mentions légales
-              </a>
-              <a href="#" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
+              </Link>
+              <Link to="/cgv" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
                 CGV
-              </a>
-              <a href="#" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
+              </Link>
+              <Link to="/confidentialite" className="text-white/60 hover:text-primary transition-colors duration-300 text-sm">
                 Politique de confidentialité
-              </a>
+              </Link>
             </div>
           </div>
         </div>
