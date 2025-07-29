@@ -67,7 +67,7 @@ const Contact = () => {
   <h3 className="text-2xl font-black mb-4">DEVIS GRATUIT</h3>
   <p className="mb-4">Obtenez une estimation personnalisée en 24h</p>
 
-  <Link href="/devis">
+  <Link to="/devis">
     <Button
       variant="outline"
       className="border-white text-white hover:bg-white hover:text-background"

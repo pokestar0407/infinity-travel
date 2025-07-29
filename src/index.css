@@ -9,15 +9,15 @@ Tous les couleurs DOIVENT être en HSL.
 
 @layer base {
   :root {
-    /* Couleurs de base */
-    --background: 220 15% 8%;
-    --foreground: 0 0% 98%;
+    /* Couleurs de base - MODE LIGHT */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 8%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 8%;
 
-    --popover: 220 15% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 8%;
 
     /* Palette principale - couleurs vibrantes de l'agence */
     --primary: 43 60% 59%;        /* Doré #D8AA55 */
@@ -30,14 +30,14 @@ Tous les couleurs DOIVENT être en HSL.
     --accent-foreground: 0 0% 100%;
 
     /* Couleurs système */
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 70%;
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 10% 40%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
+    --border: 220 10% 90%;
+    --input: 220 10% 95%;
     --ring: 43 60% 59%;
 
     /* Gradients tendance */
@@ -73,18 +73,18 @@ Tous les couleurs DOIVENT être en HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 220 15% 8%;
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 8%;
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 8%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 43 60% 59%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 220 15% 8%;
 
     --secondary: 194 100% 44%;
     --secondary-foreground: 0 0% 100%;
@@ -92,11 +92,11 @@ Tous les couleurs DOIVENT être en HSL.
     --accent: 327 89% 68%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 220 10% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 70%;
 
-    --border: 220 10% 90%;
-    --input: 220 10% 95%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
     --ring: 43 60% 59%;
   }
 }
