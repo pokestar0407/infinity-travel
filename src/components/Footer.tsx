@@ -5,10 +5,10 @@ import logoWhite from "@/assets/logo-white.png";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-foreground via-foreground/95 to-foreground text-white">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo et description */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img src={logoWhite} alt="Infinity Travel" className="h-12 w-auto" />
             </div>
@@ -30,9 +30,9 @@ const Footer = () => {
           </div>
 
           {/* Navigation */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-bold text-gradient">Navigation</h3>
-            <ul className="space-y-3">
+          <div className="space-y-4">
+            <h3 className="text-base font-bold text-gradient">Navigation</h3>
+            <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-white/80 hover:text-primary transition-colors duration-300 text-sm">
                   Accueil
@@ -62,9 +62,9 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-bold text-gradient-secondary">Services</h3>
-            <ul className="space-y-3">
+          <div className="space-y-4">
+            <h3 className="text-base font-bold text-gradient-secondary">Services</h3>
+            <ul className="space-y-2">
               <li>
                 <a href="#" className="text-white/80 hover:text-primary transition-colors duration-300 text-sm">
                   Voyages sur mesure
@@ -94,9 +94,9 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-bold text-gradient-accent">Contact</h3>
-            <div className="space-y-4">
+          <div className="space-y-4">
+            <h3 className="text-base font-bold text-gradient-accent">Contact</h3>
+            <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
                 <span className="text-white/80 text-sm">+33 1 23 45 67 89</span>
@@ -117,7 +117,7 @@ const Footer = () => {
         </div>
 
         {/* Ligne de séparation */}
-        <div className="border-t border-white/20 mt-12 pt-8">
+        <div className="border-t border-white/20 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
               © 2024 Infinity Travel. Tous droits réservés.
