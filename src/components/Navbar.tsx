@@ -8,12 +8,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "ACCUEIL", href: "#home" },
-    { label: "DESTINATIONS", href: "#destinations" },
-    { label: "CLIENTS", href: "#clients" },
-    { label: "SERVICES", href: "#services" },
-    { label: "PARTENAIRES", href: "#partners" },
-    { label: "CONTACT", href: "#contact" }
+    { label: "ACCUEIL", href: "/" },
+    { label: "DESTINATIONS", href: "/destinations" },
+    { label: "GROUPES", href: "/groupes" },
+    { label: "TRANSPORT", href: "/transport" },
+    { label: "À PROPOS", href: "/about" },
+    { label: "CONTACT", href: "/contact" }
   ];
 
   return (
@@ -32,14 +32,14 @@ const Navbar = () => {
           {/* Menu desktop */}
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-bold tracking-wide hover:text-primary transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-hero group-hover:w-full transition-all duration-300" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -69,14 +69,14 @@ const Navbar = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/50">
             <div className="p-6 space-y-6">
               {menuItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={item.href}
+                  to={item.href}
                   className="block text-lg font-bold tracking-wide hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 border-t border-border/50 space-y-3">
                 <Button variant="ghost" className="w-full font-bold">
