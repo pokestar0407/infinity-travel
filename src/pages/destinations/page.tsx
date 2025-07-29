@@ -60,7 +60,7 @@ const DestinationsPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16 scroll-fade-in">"
+          <div className="text-center mb-16 scroll-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
               <span className="text-gradient">DÉCOUVREZ</span>{" "}
               <span className="text-outline">NOS MAGNIFIQUES</span>{" "}
@@ -128,39 +128,43 @@ const DestinationsPage = () => {
         <div className="absolute inset-0 bg-gradient-secondary opacity-10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 scroll-fade-in">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black mb-6">
               <span className="text-gradient-accent">DES OFFRES</span>{" "}
               <span className="text-outline">À NE PAS RATER !</span>
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-            <div className="scroll-slide-left">
-              <h3 className="text-3xl font-black mb-6 text-gradient">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto items-center">
+            <div className="scroll-slide-left order-2 lg:order-1">
+              <h3 className="text-2xl sm:text-3xl md:text-3xl font-black mb-6 text-gradient">
                 Family Oriented
               </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Ne cherchez plus, vous y êtes ! Infinity Travel est l'agence de 
-                voyage idéale pour dénicher le voyage pas cher de rêve qui, 
-                en plus de ne pas agresser votre porte-monnaie, se révélera 
-                absolument idéal pour trouver exactement l'ambiance dont 
-                vous avez besoin pour vous remettre sur pied.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Aimez au calme, au confort simple ou luxueux, la recherche 
-                avancée de notre moteur vous permet d'affiner vos choix 
-                jusqu'à trouver le lieu idéal.
-              </p>
-              <Button variant="gradient" size="lg" className="group">
-                EXPLORER NOS OFFRES FAMILIALES
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <div className="space-y-4 text-sm sm:text-base text-muted-foreground">
+                <p>
+                  Ne cherchez plus, vous y êtes ! Infinity Travel est l'agence de 
+                  voyage idéale pour dénicher le voyage pas cher de rêve qui, 
+                  en plus de ne pas agresser votre porte-monnaie, se révélera 
+                  absolument idéal pour trouver exactement l'ambiance dont 
+                  vous avez besoin pour vous remettre sur pied.
+                </p>
+                <p>
+                  Aimez au calme, au confort simple ou luxueux, la recherche 
+                  avancée de notre moteur vous permet d'affiner vos choix 
+                  jusqu'à trouver le lieu idéal.
+                </p>
+              </div>
+              <div className="mt-6">
+                <Button variant="gradient" size="lg" className="group w-full sm:w-auto">
+                  EXPLORER NOS OFFRES FAMILIALES
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
             </div>
-            <div className="relative scroll-slide-right">
+            <div className="relative scroll-slide-right order-1 lg:order-2">
               <img 
                 src="https://images.unsplash.com/photo-1469041797191-50ace28483c3" 
                 alt="Famille sur la plage"
-                className="rounded-2xl shadow-accent w-full h-96 object-cover"
+                className="rounded-2xl shadow-accent w-full h-64 sm:h-80 md:h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl" />
             </div>
@@ -171,15 +175,15 @@ const DestinationsPage = () => {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-gradient-hero p-12 rounded-3xl text-center text-white hover-glow scroll-scale-up">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">
+          <div className="bg-gradient-hero p-6 sm:p-8 md:p-12 rounded-3xl text-center text-white hover-glow scroll-scale-up">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
               RÉSERVEZ DÈS MAINTENANT
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-lg sm:text-xl mb-6 md:mb-8 opacity-90 max-w-2xl mx-auto">
               Totally customizable multi-city trips & instant price and book
             </p>
             <Link to="/contact">
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-background">
+              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-background w-full sm:w-auto">
                 NOUS CONTACTER
               </Button>
             </Link>
