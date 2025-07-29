@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8">
             <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Infinity Travel - L'agence événementielle #1 des jeunes</span>
+            <span className="text-sm font-medium text-primary">Infinity Travel - L'agence événementielle #1 des jeunes </span>
           </div>
 
           {/* Titre principal avec effet outline */}
