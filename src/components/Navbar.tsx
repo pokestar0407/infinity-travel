@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo-white.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
     { label: "DESTINATIONS", href: "/destinations" },
@@ -29,16 +30,27 @@ const Navbar = () => {
 
           {/* Menu desktop */}
           <div className="hidden lg:flex items-center gap-8">
-            {menuItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.href}
-                className="text-sm font-bold tracking-wide hover:text-primary transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-hero group-hover:w-full transition-all duration-300" />
-              </Link>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <Link
+                  key={index}
+                  to={item.href}
+                  className={`text-sm font-bold tracking-wide transition-colors relative group ${
+                    isActive 
+                      ? 'text-gradient' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  {item.label}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-hero transition-all duration-300 ${
+                    isActive 
+                      ? 'w-full' 
+                      : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Boutons d'action desktop */}
@@ -63,16 +75,23 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/50">
             <div className="p-6 space-y-6">
-              {menuItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.href}
-                  className="block text-lg font-bold tracking-wide hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {menuItems.map((item, index) => {
+                const isActive = location.pathname === item.href;
+                return (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className={`block text-lg font-bold tracking-wide transition-colors ${
+                      isActive 
+                        ? 'text-gradient' 
+                        : 'hover:text-primary'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="pt-4 border-t border-border/50 space-y-3">
                 <Button variant="outline" className="w-full font-bold">
                   DEVIS GRATUIT
