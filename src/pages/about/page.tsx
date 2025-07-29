@@ -198,7 +198,7 @@ const AboutPage = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16">
+      <section className="py-8 pb-16">
         <div className="container mx-auto px-6">
           <div className="bg-gradient-hero p-12 rounded-3xl text-center text-white">
             <h2 className="text-3xl md:text-5xl font-black mb-6">

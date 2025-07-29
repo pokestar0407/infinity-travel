@@ -3,10 +3,11 @@ import Navbar from "@/components/Navbar";
 
 export default function DevisPage() {
   return (
-    <>
+    <div className="min-h-screen bg-background">
+      <Navbar />
       <div className="pt-32">
         <Devis />
       </div>
-    </>
+    </div>
   );
 }

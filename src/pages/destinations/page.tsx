@@ -173,7 +173,7 @@ const DestinationsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className="py-8 pb-16">
         <div className="container mx-auto px-6">
           <div className="bg-gradient-hero p-6 sm:p-8 md:p-12 rounded-3xl text-center text-white hover-glow scroll-scale-up">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
