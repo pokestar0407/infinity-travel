@@ -1,22 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Handshake } from "lucide-react";
+import sg from "@/assets/partenaires/sg.png";
+import hiscox from "@/assets/partenaires/hiscox.png";
+import  atoutFrance from "@/assets/partenaires/atout-france.png";
+import entreprisesVoyage from "@/assets/partenaires/entreprises-voyage.png";
 
 const partners = [
   {
     name: "Société Générale",
-    logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRTQwMjEzIi8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U09DSUVURSBHRU5FUkFMRTwvdGV4dD4KPHN2Zz4="
+    logo: sg,
   },
   {
     name: "Hiscox",
-    logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDA0N0FCII8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SELTQ09YPC90ZXh0Pgo8c3ZnPg=="
+    logo: hiscox,
   },
   {
     name: "Atout France",
-    logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRTQwMjEzIi8+Cjx0ZXh0IHg9IjMwIiB5PSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJ3aGl0ZSI+QVRPVVQ8L3RleHQ+Cjx0ZXh0IHg9IjMwIiB5PSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJ3aGl0ZSI+RlJBTkNFPC90ZXh0Pgo8cmVjdCB4PSI3NSIgeT0iOCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjI0IiBmaWxsPSIjMDA0N0FCIi8+CjxzdGc+"
+    logo: atoutFrance,
   },
   {
     name: "Les Entreprises du Voyage",
-    logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDA3QkE3Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MRVMgRU5UUkVQUklTRVM8L3RleHQ+Cjx0ZXh0IHg9IjYwIiB5PSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EVSBWT1lBR0U8L3RleHQ+CjxzdG1nPg=="
+    logo: entreprisesVoyage,
   }
 ];
 

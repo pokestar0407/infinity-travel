@@ -66,8 +66,8 @@ const Destinations = () => {
                   alt={destination.name}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-2xl font-black text-white mb-2 drop-shadow-lg">
                     {destination.name}
                   </h3>
