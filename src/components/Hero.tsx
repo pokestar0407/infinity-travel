@@ -23,7 +23,7 @@ const Hero = () => {
 
           {/* Titre principal avec effet outline */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6">
-            <span className="block text-outline-thick">VOYAGEZ</span>
+            <span className="block text-outline">VOYAGEZ</span>
             <span className="block text-gradient">VERS L'INFINI</span>
             <span className="block text-outline">DES EXPÉRIENCES</span>
           </h1>
