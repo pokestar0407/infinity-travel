@@ -4,8 +4,9 @@ import Navbar from "@/components/Navbar";
 export default function DevisPage() {
   return (
     <>
-      <Navbar />
-      <Devis />
+      <div className="pt-10">
+        <Devis />
+      </div>
     </>
   );
 }
