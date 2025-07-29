@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center animate-pulse-glow">
               <Zap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-black text-gradient">EVENTS AGENCY</span>
+            <span className="text-2xl font-black text-gradient">INFINITY TRAVEL</span>
           </div>
 
           {/* Menu desktop */}

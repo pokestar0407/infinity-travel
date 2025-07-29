@@ -18,14 +18,14 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8">
             <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">L'agence événementielle #1 des jeunes</span>
+            <span className="text-sm font-medium text-primary">Infinity Travel - L'agence événementielle #1 des jeunes</span>
           </div>
 
           {/* Titre principal avec effet outline */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6">
-            <span className="block text-outline-thick">CRÉONS</span>
-            <span className="block text-gradient">VOS ÉVÉNEMENTS</span>
-            <span className="block text-outline">LÉGENDAIRES</span>
+            <span className="block text-outline-thick">VOYAGEZ</span>
+            <span className="block text-gradient">VERS L'INFINI</span>
+            <span className="block text-outline">DES EXPÉRIENCES</span>
           </h1>
 
           {/* Sous-titre */}
@@ -34,8 +34,8 @@ const Hero = () => {
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Partagez vos événements et vos expériences avec les membres de la communauté. 
-            Une grande famille qui ne fait que s'agrandir, et qui n'attend que vous !
+            Embarquez pour un voyage infini d'événements extraordinaires. 
+            Infinity Travel transforme vos rêves en réalité et crée des expériences qui marquent à vie !
           </p>
 
           {/* Boutons d'action */}
