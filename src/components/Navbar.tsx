@@ -55,9 +55,11 @@ const Navbar = () => {
 
           {/* Boutons d'action desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              DEVIS GRATUIT
-            </Button>
+            <Link to="/devis">
+              <Button variant="outline" size="sm">
+                DEVIS GRATUIT
+              </Button>
+            </Link>
           </div>
 
           {/* Menu mobile toggle */}
@@ -93,9 +95,11 @@ const Navbar = () => {
                 );
               })}
               <div className="pt-4 border-t border-border/50 space-y-3">
-                <Button variant="outline" className="w-full font-bold">
-                  DEVIS GRATUIT
-                </Button>
+                <Link to="/devis">
+                  <Button variant="outline" className="w-full font-bold">
+                    DEVIS GRATUIT
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
