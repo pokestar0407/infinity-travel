@@ -12,7 +12,7 @@ const GroupesPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       {/* Hero Section */}
-      <section className="pt-10 py-24 relative overflow-hidden">
+      <section className="pt-24 py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 scroll-fade-in">
