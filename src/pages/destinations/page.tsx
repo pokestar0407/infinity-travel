@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin, Star, Users, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Import des images de destinations
 import lloretImage from "@/assets/destinations/lloret-del-mar.jpg";
@@ -50,6 +51,8 @@ const destinations = [
 ];
 
 const DestinationsPage = () => {
+  useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -57,7 +60,7 @@ const DestinationsPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">"
             <h1 className="text-5xl md:text-7xl font-black mb-6">
               <span className="text-gradient">DÉCOUVREZ</span>{" "}
               <span className="text-outline">NOS MAGNIFIQUES</span>{" "}
@@ -76,7 +79,7 @@ const DestinationsPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {destinations.map((destination, index) => (
-              <Card key={destination.name} className="group hover:shadow-primary transition-all duration-300 overflow-hidden border-2">
+              <Card key={destination.name} className="group hover-lift interactive-card border-2 stagger-child">
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={destination.image} 
@@ -124,7 +127,7 @@ const DestinationsPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-secondary opacity-10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
               <span className="text-gradient-accent">DES OFFRES</span>{" "}
               <span className="text-outline">À NE PAS RATER !</span>
@@ -132,7 +135,7 @@ const DestinationsPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-            <div>
+            <div className="scroll-slide-left">
               <h3 className="text-3xl font-black mb-6 text-gradient">
                 Family Oriented
               </h3>
@@ -153,7 +156,7 @@ const DestinationsPage = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            <div className="relative">
+            <div className="relative scroll-slide-right">
               <img 
                 src="https://images.unsplash.com/photo-1469041797191-50ace28483c3" 
                 alt="Famille sur la plage"
@@ -168,7 +171,7 @@ const DestinationsPage = () => {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-gradient-hero p-12 rounded-3xl text-center text-white">
+          <div className="bg-gradient-hero p-12 rounded-3xl text-center text-white hover-glow scroll-scale-up">
             <h2 className="text-3xl md:text-5xl font-black mb-6">
               RÉSERVEZ DÈS MAINTENANT
             </h2>

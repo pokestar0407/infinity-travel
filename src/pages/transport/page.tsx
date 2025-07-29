@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Plane, Car, Bus, Truck, Users, Clock, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const transportServices = [
   {
@@ -44,6 +45,8 @@ const transportServices = [
 ];
 
 const TransportPage = () => {
+  useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -51,7 +54,7 @@ const TransportPage = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade-in">
             <h1 className="text-4xl md:text-6xl font-black mb-6">
               <span className="text-gradient">SERVICE DE RÉSERVATION</span>
             </h1>
@@ -73,7 +76,7 @@ const TransportPage = () => {
             {transportServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <Card key={service.title} className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-2">
+                <Card key={service.title} className="group hover-lift interactive-card border-2 stagger-child">
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={service.image} 
