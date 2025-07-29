@@ -13,19 +13,19 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
       
       {/* Contenu principal */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-8">
         <div className="max-w-6xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8 ">
             <Star className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Infinity Travel - L'agence événementielle #1 des jeunes</span>
           </div>
 
           {/* Titre principal avec effet outline */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-6">
-            <span className="block text-outline">VOYAGEZ</span>
-            <span className="block text-gradient">VERS L'INFINI</span>
-            <span className="block text-outline">DES EXPÉRIENCES</span>
+            <span className="block text-outline">LE VOYAGE</span>
+            <span className="block text-gradient">A VOTRE</span>
+            <span className="block text-outline">PORTEÉ AVEC NOUS</span>
           </h1>
 
           {/* Sous-titre */}
