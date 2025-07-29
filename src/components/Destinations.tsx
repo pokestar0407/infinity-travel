@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { MapPin, Plane } from "lucide-react";
 import lloretDelMar from "@/assets/destinations/lloret-del-mar.jpg";
@@ -55,34 +56,36 @@ const Destinations = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {destinations.map((destination, index) => (
-            <Card 
-              key={index}
-              className="group hover-lift interactive-card border-2 stagger-child"
-            >
-              <div className="relative">
-                <img 
-                  src={destination.image} 
-                  alt={destination.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl font-black text-white mb-2 drop-shadow-lg">
-                    {destination.name}
-                  </h3>
+            <div key={index} className="relative">
+              <Card 
+                className="group hover-lift interactive-card border-2 stagger-child"
+              >
+                <div className="relative">
+                  <img 
+                    src={destination.image} 
+                    alt={destination.name}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-2xl font-black text-white mb-2 drop-shadow-lg">
+                      {destination.name}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-              
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">
-                  {destination.description}
-                </p>
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Découvrir
-                </Button>
-              </CardContent>
-            </Card>
+                
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground mb-4">
+                    {destination.description}
+                  </p>
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Découvrir
+                  </Button>
+                </CardContent>
+              </Card>
+              {index % 2 === 0 && <BorderBeam size={100} duration={20} delay={index * 2} />}
+            </div>
           ))}
         </div>
 
