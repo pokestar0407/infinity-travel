@@ -1,5 +1,5 @@
+
 import { Button } from "@/components/ui/button";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Music, Users, Zap, Target, Sparkles, Heart } from "lucide-react";
 
@@ -61,29 +61,27 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="relative">
-                <Card 
-                  className="hover-lift interactive-card border-2 stagger-child"
-                >
-                  {/* Gradient background effect */}
-                  <div className={`absolute inset-0 bg-gradient-${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  
-                  <CardHeader className="relative z-10">
-                    <div className={`w-16 h-16 rounded-2xl bg-${service.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <Icon className={`w-8 h-8 text-${service.color}`} />
-                    </div>
-                    <CardTitle className="text-2xl font-black tracking-tight">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
-                    <CardDescription className="text-base leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-                {index === 1 && <BorderBeam size={45} duration={12} delay={2} borderWidth={1.2} colorFrom="#F5629F" colorTo="#D8AA55" />}
-              </div>
+              <Card 
+                key={index}
+                className="hover-lift interactive-card border-2 stagger-child overflow-hidden"
+              >
+                {/* Gradient background effect */}
+                <div className={`absolute inset-0 bg-gradient-${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                
+                <CardHeader className="relative z-10">
+                  <div className={`w-16 h-16 rounded-2xl bg-${service.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <Icon className={`w-8 h-8 text-${service.color}`} />
+                  </div>
+                  <CardTitle className="text-2xl font-black tracking-tight">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             );
           })}
         </div>

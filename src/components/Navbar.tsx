@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
@@ -8,7 +9,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "ACCUEIL", href: "/" },
     { label: "DESTINATIONS", href: "/destinations" },
     { label: "GROUPES", href: "/groupes" },
     { label: "TRANSPORT", href: "/transport" },
@@ -26,7 +26,6 @@ const Navbar = () => {
             </div>
             <span className="text-2xl font-black text-gradient">INFINITY TRAVEL</span>
           </Link>
-
 
           {/* Menu desktop */}
           <div className="hidden lg:flex items-center gap-8">

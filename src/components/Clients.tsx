@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Building, GraduationCap, Briefcase } from "lucide-react";
@@ -65,14 +66,14 @@ const Clients = () => {
             return (
               <Card 
                 key={index}
-                className="group hover-lift interactive-card border-2 stagger-child"
+                className="group transition-all duration-300 hover:scale-105 hover:shadow-lg border-2 stagger-child overflow-hidden"
               >
                 {/* Background avec image placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+                <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden">
                   <img 
                     src={`https://images.unsplash.com/${client.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
                     alt={client.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
                   
