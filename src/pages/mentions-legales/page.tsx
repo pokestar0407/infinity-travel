@@ -39,13 +39,13 @@ const MentionsLegalesPage = () => {
                 </div>
               </section>
 
-              <section>
+              {/* <section>
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Hébergement</h2>
                 <div className="bg-card p-6 rounded-lg border">
                   <p><strong>Hébergeur :</strong> Lovable</p>
                   <p><strong>Adresse :</strong> [Adresse de l'hébergeur]</p>
                 </div>
-              </section>
+              </section> */}
 
               <section>
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Immatriculation Atout France</h2>
