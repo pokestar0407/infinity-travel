@@ -135,10 +135,10 @@ const TransportPage = () => {
               const isFlipped = flippedCards[index];
               
               return (
-                <div key={service.title} className="group perspective-1000 stagger-child">
-                  <div className={`relative w-full h-[600px] transform-style-preserve-3d transition-transform duration-700 ${isFlipped ? 'rotate-y-180' : ''}`}>
+                <div key={service.title} className={`flip-card ${isFlipped ? 'flipped' : ''} stagger-child`}>
+                  <div className="flip-card-inner">
                     {/* Face avant */}
-                    <Card className="absolute inset-0 backface-hidden hover-lift interactive-card border-2">
+                    <Card className="flip-card-front hover-lift interactive-card border-2">
                       <div className="relative h-48 overflow-hidden">
                         <img 
                           src={`${service.image}?w=400&h=300&fit=crop&auto=format,compress&q=75`}
@@ -193,7 +193,7 @@ const TransportPage = () => {
                     </Card>
 
                     {/* Face arrière */}
-                    <Card className="absolute inset-0 backface-hidden rotate-y-180 border-2 bg-gradient-to-br from-background to-muted/20">
+                    <Card className="flip-card-back border-2 bg-gradient-to-br from-background to-muted/20">
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between">
                           <div className={`w-12 h-12 bg-${service.color}/10 rounded-xl flex items-center justify-center`}>
