@@ -43,11 +43,8 @@ const Navbar = () => {
 
           {/* Boutons d'action desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" className="font-bold">
-              CONNEXION
-            </Button>
-            <Button variant="gradient" className="font-bold">
-              REJOINDRE
+            <Button variant="outline" size="sm">
+              DEVIS GRATUIT
             </Button>
           </div>
 
@@ -77,11 +74,8 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border/50 space-y-3">
-                <Button variant="ghost" className="w-full font-bold">
-                  CONNEXION
-                </Button>
-                <Button variant="gradient" className="w-full font-bold">
-                  REJOINDRE
+                <Button variant="outline" className="w-full font-bold">
+                  DEVIS GRATUIT
                 </Button>
               </div>
             </div>

@@ -10,10 +10,10 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
       
       {/* Contenu principal */}
-      <div className="relative z-10 container mx-auto px-6 text-center pt-8">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-24 md:pt-32">
         <div className="max-w-6xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8 animate-slideInDown">
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto pb-12">
             <div className="text-center stagger-child">
               <div className="text-3xl md:text-4xl font-black text-gradient mb-2">500+</div>
               <div className="text-sm text-muted-foreground uppercase tracking-wide">Événements créés</div>
