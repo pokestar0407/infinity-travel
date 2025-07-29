@@ -79,9 +79,13 @@ const TransportPage = () => {
                 <Card key={service.title} className="group hover-lift interactive-card border-2 stagger-child">
                   <div className="relative h-48 overflow-hidden">
                     <img 
-                      src={service.image} 
+                      src={`${service.image}?w=400&h=300&fit=crop&auto=format,compress&q=75`}
                       alt={service.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      style={{
+                        background: 'linear-gradient(45deg, hsl(var(--primary)/0.1), hsl(var(--secondary)/0.1))',
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 right-4">
