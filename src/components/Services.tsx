@@ -87,9 +87,9 @@ const Services = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="gradient" size="xl" className="group">
+          <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
             DÉCOUVRIR TOUS NOS SERVICES
-            <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" />
           </Button>
         </div>
       </div>
