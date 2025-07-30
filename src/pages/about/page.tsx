@@ -92,9 +92,9 @@ const AboutPage = () => {
                 </p>
               </div>
 
-              <Button variant="gradient" size="lg" className="group">
+              <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                 DÉCOUVRIR NOS SERVICES
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
@@ -210,14 +210,14 @@ const AboutPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-background">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-background text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   NOUS CONTACTER
                 </Button>
               </Link>
               <Link to="/destinations">
-                <Button variant="secondary" size="xl">
+                <Button variant="secondary" size="lg" className="text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   VOIR NOS DESTINATIONS
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
               </Link>
             </div>
