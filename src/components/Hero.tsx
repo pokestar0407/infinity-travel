@@ -140,13 +140,13 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fadeInUp"
             style={{ animationDelay: "0.6s" }}
           >
-            <Button variant="gradient" size="xl" className="group">
+            <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
               VOIR NOS ÉVÉNEMENTS
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <Button variant="outline" size="xl" className="group">
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            <Button variant="outline" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
+              <Play className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
               DÉCOUVRIR NOTRE UNIVERS
             </Button>
           </div>
