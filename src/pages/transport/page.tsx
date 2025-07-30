@@ -242,13 +242,15 @@ const TransportPage = () => {
                           </div>
                         </div>
                         
-                        <Button 
-                          variant="gradient" 
-                          size="sm" 
-                          className="w-full mt-4"
-                        >
-                          Réserver maintenant
-                        </Button>
+                        <Link to="/devis">
+                          <Button 
+                            variant="gradient" 
+                            size="sm" 
+                            className="w-full mt-4"
+                          >
+                            Réserver maintenant
+                          </Button>
+                        </Link>
                       </CardContent>
                     </Card>
                   </div>
@@ -339,7 +341,7 @@ const TransportPage = () => {
               Réservez dès maintenant votre transport pour votre prochain voyage
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/devis">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-background text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   RÉSERVER MAINTENANT
                 </Button>

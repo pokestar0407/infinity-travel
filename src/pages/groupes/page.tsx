@@ -203,7 +203,7 @@ const GroupesPage = () => {
               Contactez-nous dès maintenant pour organiser votre voyage de groupe
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/devis">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-background text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   DEMANDER UN DEVIS GROUPE
                 </Button>
