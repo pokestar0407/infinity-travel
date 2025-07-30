@@ -11,17 +11,17 @@ Tous les couleurs DOIVENT être en HSL.
   :root {
     /* Couleurs de base - MODE LIGHT */
     --background: 0 0% 100%;
-    --foreground: 220 15% 8%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 8%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 8%;
+    --popover-foreground: 0 0% 0%;
 
     /* Palette principale - couleurs vibrantes de l'agence */
     --primary: 43 60% 59%;        /* Doré #D8AA55 */
-    --primary-foreground: 220 15% 8%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 194 100% 44%;    /* Bleu cyan #00B1E2 */
     --secondary-foreground: 0 0% 100%;
@@ -31,7 +31,7 @@ Tous les couleurs DOIVENT être en HSL.
 
     /* Couleurs système */
     --muted: 220 10% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted-foreground: 0 0% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
