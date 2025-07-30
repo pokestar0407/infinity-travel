@@ -155,9 +155,9 @@ const DestinationsPage = () => {
                 </p>
               </div>
               <div className="mt-6">
-                <Button variant="gradient" size="lg" className="group w-full sm:w-auto">
+                <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   EXPLORER NOS OFFRES FAMILIALES
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
             </div>
@@ -184,7 +184,7 @@ const DestinationsPage = () => {
               Totally customizable multi-city trips & instant price and book
             </p>
             <Link to="/contact">
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-background w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-background text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                 NOUS CONTACTER
               </Button>
             </Link>
