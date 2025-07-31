@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Plane } from "lucide-react";
+import { Link } from "react-router-dom";
 import lloretDelMar from "@/assets/destinations/lloret-del-mar.jpg";
 import barcelone from "@/assets/destinations/barcelone.jpg";
 import dubai from "@/assets/destinations/dubai.jpg";
@@ -78,20 +79,24 @@ const Destinations = () => {
                 <p className="text-muted-foreground mb-4">
                   {destination.description}
                 </p>
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Découvrir
-                </Button>
+                <Link to="/devis">
+                  <Button variant="outline" size="sm" className="w-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Découvrir
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
-            VOIR TOUTES NOS DESTINATIONS
-            <Plane className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/destinations">
+            <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
+              VOIR TOUTES NOS DESTINATIONS
+              <Plane className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
