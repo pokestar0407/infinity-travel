@@ -46,61 +46,30 @@ const Clients = () => {
           </div>
           
           <h2 className="text-5xl md:text-7xl font-black mb-6">
-            <span className="text-outline">NOS</span>{" "}
-            <span className="text-gradient-secondary">CLIENTS</span>
+            <span className="text-outline">ILS ONT VOYAGÉ</span>{" "}
+            <span className="text-gradient-secondary">AVEC NOUS</span>
           </h2>
         </div>
 
-        <div className="max-w-5xl mx-auto mb-12">
-          <p className="text-lg md:text-xl text-muted-foreground text-center leading-relaxed">
-            Depuis sa création, notre équipe, passionnée de voyages et attachée aux valeurs humaines de partage, 
-            met son expertise, sa créativité et son professionnalisme au service des organisateurs de voyage de 
-            groupe (entreprises, BDE, associations, comité d'entreprise). Nous concrétisons votre projet en 
-            élaborant des <span className="text-gradient-accent font-bold">voyages clés en main inoubliables</span>.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {clientTypes.map((client, index) => {
-            const Icon = client.icon;
-            return (
-              <Card 
-                key={index}
-                className="group transition-all duration-300 hover:scale-[1.02] hover:shadow-md border border-border/50 stagger-child overflow-hidden bg-card/50 backdrop-blur-sm"
-              >
-                {/* Background avec image placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/${client.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                    alt={client.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  
-                  {/* Badge avec titre */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className={`inline-flex items-center gap-2 bg-${client.color}/90 text-${client.color}-foreground px-4 py-2 rounded-full backdrop-blur-sm`}>
-                      <Icon className="w-5 h-5" />
-                      <span className="font-bold text-sm">{client.title}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <CardContent className="p-6">
-                  <p className="text-muted-foreground text-center">
-                    {client.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        <div className="text-center">
-          <Button variant="secondary" size="xl" className="group">
-            DÉCOUVRIR NOS SERVICES
-            <Building className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          </Button>
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            Vivez l'expérience StudiMove
+          </h3>
+          
+          <div className="text-center mb-12 space-y-4">
+            <div className="flex items-center justify-center gap-3 text-lg">
+              <span className="text-2xl">💎</span>
+              <span>Des voyages conçus pour les étudiants</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-lg">
+              <span className="text-2xl">💰</span>
+              <span>Des prix accessibles, tout compris</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-lg">
+              <span className="text-2xl">🎉</span>
+              <span>Une ambiance fun et des rencontres inoubliables</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
