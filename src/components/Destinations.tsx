@@ -43,15 +43,15 @@ const Destinations = () => {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6">
-            <span className="text-gradient">NOS</span>{" "}
-            <span className="text-outline">DESTINATIONS</span>
+            <span className="text-gradient">DÉCOUVREZ</span>{" "}
+            <span className="text-outline">NOS</span><br />
+            <span className="text-outline">MAGNIFIQUES</span><br />
+            <span className="text-gradient">DESTINATIONS</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Plage ou montagne, ville ou campagne, en France ou à l'étranger : une multitude de choix 
-            de voyages s'offre à vous avec <span className="text-gradient-accent font-bold">Infinity Travel</span> !
-            <br className="hidden md:block" />
-            Découvrez notre sélection de séjours pour des souvenirs inoubliables et des moments de découverte uniques.
+            Des expériences <span className="text-gradient-accent font-bold">inoubliables</span> dans les plus belles destinations du monde. Chaque 
+            voyage est une <span className="text-gradient-secondary font-bold">aventure unique</span> !
           </p>
         </div>
 
