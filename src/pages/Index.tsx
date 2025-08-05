@@ -4,8 +4,6 @@ import Destinations from "@/components/Destinations";
 import Clients from "@/components/Clients";
 import Services from "@/components/Services";
 import Partners from "@/components/Partners";
-import CallToAction from "@/components/CallToAction";
-import MobileApp from "@/components/MobileApp";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -21,8 +19,6 @@ const Index = () => {
         <Destinations />
         <Clients />
         <Services />
-        <CallToAction />
-        <MobileApp />
         <Partners />
         <Contact />
       </main>
