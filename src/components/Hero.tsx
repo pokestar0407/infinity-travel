@@ -110,30 +110,44 @@ const Hero = () => {
 
           {/* Titre principal */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 animate-fadeInUp">
-            <span className="block text-gradient">PARTEZ À L'AVENTURE</span>
-            <span className="block text-outline-white">AVEC STUDIMOVE</span>
+            <span className="block text-outline-white">LE VOYAGE</span>
+            <span className="block text-gradient">A VOTRE</span>
+            <span className="block text-outline-white">PORTÉE AVEC NOUS</span>
           </h1>
 
           {/* Sous-titres */}
           <p
-            className="text-lg md:text-xl text-white max-w-4xl mx-auto mb-8 animate-fadeInUp leading-relaxed"
+            className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8 animate-fadeInUp"
             style={{ animationDelay: "0.2s" }}
           >
-            Des voyages étudiants inoubliables en Europe et au-delà. Transport, logement, activités inclus.
+            Une communauté créée par{" "}
+            <span className="text-gradient-secondary font-bold">VOUS</span> pour{" "}
+            <span className="text-gradient-accent font-bold">VOUS</span> et avec{" "}
+            <span className="text-gradient font-bold">NOUS</span>
+          </p>
+
+          <p
+            className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-12 animate-fadeInUp"
+            style={{ animationDelay: "0.4s" }}
+          >
+            Embarquez pour un voyage infini d'événements extraordinaires.
+            Infinity Travel transforme vos rêves en réalité et crée des
+            expériences qui marquent à vie !
           </p>
 
           {/* CTA */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fadeInUp"
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
-              DÉCOUVRIR LES DESTINATIONS
+              VOIR NOS ÉVÉNEMENTS
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <Button variant="outline" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none border-white text-white hover:bg-white hover:text-background">
-              S'INSCRIRE À LA NEWSLETTER
+            <Button variant="outline" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
+              <Play className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+              DÉCOUVRIR NOTRE UNIVERS
             </Button>
           </div>
 
