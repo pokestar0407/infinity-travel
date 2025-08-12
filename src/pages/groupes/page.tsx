@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
+import groupe from "@/assets/groupe.jpg";
+import groupe1 from "@/assets/groupe1.jpg";
 const GroupesPage = () => {
   useScrollAnimation();
   
@@ -79,14 +80,14 @@ const GroupesPage = () => {
             <div className="space-y-6 scroll-slide-right">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
+                  src={groupe} 
                   alt="Service client"
                   className="rounded-2xl shadow-secondary w-full h-64 object-cover"
                 />
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                  src={groupe1}
                   alt="Groupe d'amis"
                   className="rounded-2xl shadow-accent w-full h-64 object-cover"
                 />
@@ -119,12 +120,11 @@ const GroupesPage = () => {
             <Card className="border-2 bg-card/90 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
                 <p className="text-lg text-muted-foreground mb-8">
-                  Everybody knows that Snow Mountain is more than mountains! 
-                  Consectetur adipiscing elit. Curabitur quis pellentesque quam, 
-                  quis convallis neque. Sed ullamcorper mauris justo, vitae tempus 
-                  purus viverra at. Nullam sit amet nec quis elit. Nulla vitae tellus 
-                  in diam ornare tincidunt ut sed dolor. Nullam non justo ac felis 
-                  cursus imperdiet.
+                ✨ Des offres exceptionnelles pour vos voyages en groupe
+Économisez jusqu’à 50 % sur votre prochaine aventure !
+Organiser un voyage en groupe n’a jamais été aussi avantageux ! Que vous planifiiez un séjour entre amis, un voyage scolaire, un team building ou une escapade familiale, nous avons conçu des offres sur mesure pour répondre à toutes vos envies… tout en respectant votre budget.
+Profitez de réductions allant jusqu’à -50 % sur une sélection de destinations en réservant un voyage groupé via notre plateforme. Grâce à notre réseau de partenaires privilégiés (hébergements, transports, activités locales), nous sommes en mesure de vous offrir des tarifs exclusifs introuvables ailleurs.
+
                 </p>
                 <Button variant="gradient" size="lg" className="group text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                   J'EN PROFITE !

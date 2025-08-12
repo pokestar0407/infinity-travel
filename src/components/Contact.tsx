@@ -65,7 +65,7 @@ const Contact = () => {
     {/* Colonne 2 : Devis */}
     <div className="bg-gradient-hero p-8 rounded-2xl text-white text-center flex flex-col justify-center">
   <h3 className="text-2xl font-black mb-4">DEVIS GRATUIT</h3>
-  <p className="mb-4">Obtenez une estimation personnalisée en 24h</p>
+  <p className="mb-4">Obtenez une estimation personnalisée en 48h</p>
 
   <Link to="/devis">
     <Button

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import staff from "@/assets/staff.png";
 
 const teamValues = [
   {
@@ -28,8 +29,8 @@ const teamValues = [
 ];
 
 const stats = [
-  { number: "500+", label: "Événements organisés", color: "primary" },
-  { number: "50K+", label: "Voyageurs satisfaits", color: "secondary" },
+  { number: "150+", label: "Événements organisés", color: "primary" },
+  { number: "12K+", label: "Voyageurs satisfaits", color: "secondary" },
   { number: "95%", label: "Taux de satisfaction", color: "accent" },
   { number: "24/7", label: "Support client", color: "primary" }
 ];
@@ -63,7 +64,7 @@ const AboutPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
             <div className="relative scroll-slide-left">
               <img 
-                src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" 
+                src={staff} 
                 alt="Équipe Infinity Travel en réunion"
                 className="rounded-2xl shadow-primary w-full h-96 object-cover"
               />

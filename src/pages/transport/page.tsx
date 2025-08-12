@@ -6,6 +6,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
+import jet from "@/assets/jet.jpg";
+import van from "@/assets/van.jpg";
+import location from "@/assets/location.jpg";
+import bus from "@/assets/bus_et_train.jpg";
 
 const transportServices = [
   {
@@ -13,7 +17,7 @@ const transportServices = [
     icon: Plane,
     description: "Réservez ton billet d'avion en toute sérénité",
     details: "Vol privé, première classe ou économique selon vos besoins",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    image: jet,
     color: "primary",
     features: ["Vol privé disponible", "Réservation flexible", "Service VIP"],
     backContent: {
@@ -34,7 +38,7 @@ const transportServices = [
     icon: Car,
     description: "Louez la voiture pour des trajets sans soucis",
     details: "Large gamme de véhicules pour tous vos déplacements",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
+    image: location,
     color: "secondary",
     features: ["Assurance incluse", "Véhicules récents", "Livraison possible"],
     backContent: {
@@ -55,7 +59,7 @@ const transportServices = [
     icon: Bus,
     description: "Tout bus ou taxi train réservé selon tes disponibilités",
     details: "Transport confortable pour vos groupes",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    image: bus,
     color: "accent",
     features: ["Transport de groupe", "Itinéraires personnalisés", "Confort optimal"],
     backContent: {
@@ -68,7 +72,7 @@ const transportServices = [
         { icon: CheckCircle, text: "Tarifs dégressifs selon la taille du groupe" }
       ],
       pricing: "À partir de 15€ par personne",
-      contact: "Devis gratuit sous 24h"
+      contact: "Devis gratuit sous 48h"
     }
   },
   {
@@ -76,7 +80,7 @@ const transportServices = [
     icon: Truck,
     description: "Pour tes trajets en groupe ou en famille quoi de mieux qu'un van ?",
     details: "Solution idéale pour les petits groupes",
-    image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3",
+    image: van,
     color: "primary",
     features: ["8-15 places", "Équipé et moderne", "Conducteur professionnel"],
     backContent: {
@@ -325,7 +329,7 @@ const TransportPage = () => {
             <blockquote className="text-2xl md:text-3xl font-light italic text-muted-foreground mb-8">
               "Je n'ai pas encore été partout, mais c'est sur ma liste."
             </blockquote>
-            <cite className="text-lg text-gradient font-semibold">- Susan Sontag</cite>
+            <cite className="text-lg text-gradient font-semibold">- Eva GONCALEZ </cite>
           </div>
         </div>
       </section>
