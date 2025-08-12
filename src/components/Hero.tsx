@@ -154,11 +154,11 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto pb-12">
             <div className="text-center stagger-child">
-              <div className="text-3xl md:text-4xl font-black text-gradient mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-black text-gradient mb-2">150+</div>
               <div className="text-sm text-white uppercase tracking-wide">Événements créés</div>
             </div>
             <div className="text-center stagger-child">
-              <div className="text-3xl md:text-4xl font-black text-gradient-secondary mb-2">50K+</div>
+              <div className="text-3xl md:text-4xl font-black text-gradient-secondary mb-2">12k+</div>
               <div className="text-sm text-white uppercase tracking-wide">Participants</div>
             </div>
             <div className="text-center stagger-child">

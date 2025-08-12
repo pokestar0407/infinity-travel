@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo-white.png";
+import logo from "@/assets/logo-site.jpg";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -24,10 +24,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center animate-pulse-glow">
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center ">
               <img src={logo} alt="Infinity Travel logo" className="object-contain w-full h-full" />
             </div>
-            <span className="text-2xl font-black text-gradient">INFINITY TRAVEL</span>
+            {/* <span className="text-2xl font-black">INFINITY TRAVEL</span> */}
           </Link>
 
           {/* Menu desktop */}

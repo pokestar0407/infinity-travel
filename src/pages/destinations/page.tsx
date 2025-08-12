@@ -180,9 +180,7 @@ const DestinationsPage = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
               RÉSERVEZ DÈS MAINTENANT
             </h2>
-            <p className="text-lg sm:text-xl mb-6 md:mb-8 opacity-90 max-w-2xl mx-auto">
-              Totally customizable multi-city trips & instant price and book
-            </p>
+      
             <Link to="/contact">
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-background text-sm sm:text-lg px-6 sm:px-10 w-full sm:w-auto max-w-xs sm:max-w-none">
                 NOUS CONTACTER

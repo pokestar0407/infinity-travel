@@ -12,22 +12,22 @@ const destinations = [
   {
     name: "Lloret del Mar",
     image: lloretDelMar,
-    description: "Plages paradisiaques et fêtes inoubliables sur la Costa Brava"
+    description: "Soleil, plage et fiesta Partez Avec Infinity Travel pour un séjour tout compris à Lloret del Mar : transport, hébergement, pool party, boat party, soirées exclusives et détente sur les plus belles plages de la Costa Brava. Le spot idéal pour faire la fête entre amis !"
   },
   {
     name: "Barcelone", 
     image: barcelone,
-    description: "Art, culture et vie nocturne dans la capitale catalane"
+    description: "Entre culture, soleil et ambiance unique Avec Infinity Travel, explorez Barcelone comme jamais : flânez dans ses ruelles animées, détendez-vous sur les plages urbaines, vivez l’énergie de la ville entre tapas, rooftop et soirées vibrantes. Un city trip mêlant découvertes, moments chill et ambiance festive, votre rythme."
   },
   {
     name: "Dubai",
     image: dubai,
-    description: "Luxe et modernité dans la perle du Moyen-Orient"
+    description: "Dubaï — Luxe, dépaysement et sensations fortes  Avec Infinity Travel, découvrez Dubaï sous son plus beau jour : entre plages, désert, buildings futuristes et soirées raffinées, vivez une expérience unique mêlant aventure",
   },
   {
     name: "Amsterdam",
     image: amsterdam,
-    description: "Canaux romantiques et ambiance unique européenne"
+    description: "Amsterdam — Liberté, charme et ambiance unique  Avec Infinity Travel, partez à la découverte d’Amsterdam : ses canaux romantiques, ses quartiers vibrants, ses musées incontournables et ses soirées conviviales. Une escapade idéale entre culture, détente et une touche de fête dans l’une des capitales les plus branchées d’Europe.",
   }
 ];
 
