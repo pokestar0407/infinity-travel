@@ -5,18 +5,36 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import DevisPage from "./pages/devis/page";
-import DestinationsPage from "./pages/destinations/page";
-import GroupesPage from "./pages/groupes/page";
-import TransportPage from "./pages/transport/page";
-import AboutPage from "./pages/about/page";
-import MentionsLegalesPage from "./pages/mentions-legales/page";
-import CGVPage from "./pages/cgv/page";
-import ConfidentialitePage from "./pages/confidentialite/page";
+// import NotFound from "./pages/NotFound";
+// import DevisPage from "./pages/devis/page";
+// import DestinationsPage from "./pages/destinations/page";
+// import GroupesPage from "./pages/groupes/page";
+// import TransportPage from "./pages/transport/page";
+// import AboutPage from "./pages/about/page";
+// import MentionsLegalesPage from "./pages/mentions-legales/page";
+// import CGVPage from "./pages/cgv/page";
+// import ConfidentialitePage from "./pages/confidentialite/page";
 
 const queryClient = new QueryClient();
 
+// MODE MAINTENANCE : Toutes les routes affichent la page de maintenance
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          {/* Toutes les routes redirigent vers la page de maintenance */}
+          <Route path="*" element={<Index />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+/* ROUTES NORMALES (à décommenter quand la maintenance est terminée)
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -35,13 +53,12 @@ const App = () => (
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
           <Route path="/cgv" element={<CGVPage />} />
           <Route path="/confidentialite" element={<ConfidentialitePage />} />
-
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
+*/
 
 export default App;
